@@ -37,12 +37,17 @@ for (let i=0; i<array.length; i++) {
 
 console.log(minValue()) */
 
-function findMax() {
-  let max = 500;
-  for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i] > max) {
-      max = arguments[i];
+// minimum value
+    
+  // elmentjuk az elso szamot
+  let smallestNumber = args[0];
+  
+  //megvizsgaljuk a tobbit, osszehasonlitjuk a tobbivel - for loop
+  for (let i = 0; i < args.length; i++){
+    let currentNumber = args[i];
+    //ha a current kisebb, felülírja a smallest értékét
+    if (smallestNumber > currentNumber){
+      smallestNumber = currentNumber
     }
   }
-  return max;
-}
+return smallestNumber
